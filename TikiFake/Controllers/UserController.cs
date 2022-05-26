@@ -20,12 +20,9 @@ namespace TikiFake.Controllers
             _userRepository = userRepository;
         }
         [HttpGet]
-        public ActionResult<ServiceResponses<List<User>>> Get()
+        public async Task<ActionResult<ServiceResponses<List<User>>>> Get()
         {
-            var serviceResponse = new ServiceResponses<List<User>>();
-            var dbUser = _userRepository.Get();
-            //serviceResponse.Data = dbUser;
-            return dbUser;
+            return Ok(await _userRepository.Get());
         }
     }
 }
