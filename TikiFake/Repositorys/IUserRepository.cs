@@ -8,10 +8,10 @@ namespace TikiFake.Repositorys
 {
     public interface IUserRepository
     {
-        ServiceResponses<List<User>> Get();
-        ServiceResponses<User> Get(string id);
-        ServiceResponses<List<User>> Create (User user);
-        ServiceResponses<List<User>> Update (string id, User user);
-        ServiceResponses<List<User>> Delete(string id);
+        Task<ServiceResponses<List<User>>> Get();
+        Task<ServiceResponses<User>> Get(string id);
+        Task<ServiceResponses<List<User>>> Create (User user);
+        Task<ServiceResponses<List<User>>> Update (string id, User user);
+        Task<ServiceResponses<List<User>>> Delete(string id);
     }
 }

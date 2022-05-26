@@ -18,32 +18,32 @@ namespace TikiFake.Repositorys
             _user = database.GetCollection<User>(settings.UsersCollectionName);
         }
 
-        public ServiceResponses<List<User>> Create(User user)
+        public async Task<ServiceResponses<List<User>>> Create(User user)
         {
             //var ServiceResponses = new ServiceResponses<List<User>>();
             throw new NotImplementedException();
 
         }
 
-        public ServiceResponses<List<User>> Delete(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ServiceResponses<List<User>> Get()
+        public async Task<ServiceResponses<List<User>>> Get()
         {
             var serviceResponses = new ServiceResponses<List<User>>();
-            var dbUser = _user.Find(s => true).ToList();
-            serviceResponses.Data = dbUser;
+            var dbUser = await _user.Find(s => true).ToListAsync();
+            serviceResponses.Data = dbUser.ToList();
             return serviceResponses;
         }
 
-        public ServiceResponses<User> Get(string id)
+        public async Task<ServiceResponses<User>> Get(string id)
         {
             throw new NotImplementedException();
         }
 
-        public ServiceResponses<List<User>> Update(string id, User user)
+        public async Task<ServiceResponses<List<User>>> Update(string id, User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<ServiceResponses<List<User>>> Delete(string id)
         {
             throw new NotImplementedException();
         }
