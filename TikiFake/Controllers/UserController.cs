@@ -29,5 +29,12 @@ namespace TikiFake.Controllers
         {
             return Ok(await _userRepository.Get(id));
         }
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponses<List<User>>>> Delete(string id)
+        {
+            var user = _userRepository.Get(id);
+
+            return Ok(await _userRepository.Delete(id));
+        }
     }
 }
