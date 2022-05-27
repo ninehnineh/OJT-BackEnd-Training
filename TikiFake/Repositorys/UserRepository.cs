@@ -35,7 +35,11 @@ namespace TikiFake.Repositorys
 
         public async Task<ServiceResponses<User>> Get(string id)
         {
-            throw new NotImplementedException();
+            var serviceResponses = new ServiceResponses<User>();
+            var dbUser = await _user.Find(s => s.Id == id).FirstOrDefaultAsync();
+            serviceResponses.Data = dbUser;
+
+            return serviceResponses;
         }
 
         public async Task<ServiceResponses<List<User>>> Update(string id, User user)

@@ -24,5 +24,10 @@ namespace TikiFake.Controllers
         {
             return Ok(await _userRepository.Get());
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ServiceResponses<User>>> Get(string id)
+        {
+            return Ok(await _userRepository.Get(id));
+        }
     }
 }
