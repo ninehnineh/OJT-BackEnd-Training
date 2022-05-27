@@ -45,7 +45,33 @@ namespace TikiFake.Repositorys
 
         public async Task<ServiceResponses<List<User>>> Delete(string id)
         {
-            throw new NotImplementedException();
+            var serviceResponses = new ServiceResponses<List<User>>();
+
+            if (id == null)
+            {
+                serviceResponses.Message = "Id cannot null";
+                serviceResponses.Success = false;
+                return serviceResponses;
+            }
+
+            var deleteUser = await _user.Find(s => s.Id == id).FirstOrDefaultAsync();
+
+
+
+            if (deleteUser != null)
+            {
+                deleteUser.Isactive = false;
+                _user.ReplaceOne(s => s.Id == id, deleteUser);
+                var dbUser = await _user.Find(s => true).ToListAsync();
+                serviceResponses.Message = "Delete Successed";
+                serviceResponses.Data = dbUser.ToList();
+            } else
+            {
+                serviceResponses.Message = $"Cannot find user with the id : {id}";
+                serviceResponses.Success = false;
+            }
+
+            return serviceResponses;
         }
     }
 }

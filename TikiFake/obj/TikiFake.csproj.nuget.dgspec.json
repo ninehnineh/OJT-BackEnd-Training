@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\project-vs\\TikiFake\\TikiFake\\TikiFake.csproj": {}
+    "C:\\Ky 6\\OJT-BackEnd-Training\\TikiFake\\TikiFake.csproj": {}
   },
   "projects": {
-    "C:\\project-vs\\TikiFake\\TikiFake\\TikiFake.csproj": {
+    "C:\\Ky 6\\OJT-BackEnd-Training\\TikiFake\\TikiFake.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project-vs\\TikiFake\\TikiFake\\TikiFake.csproj",
+        "projectUniqueName": "C:\\Ky 6\\OJT-BackEnd-Training\\TikiFake\\TikiFake.csproj",
         "projectName": "TikiFake",
-        "projectPath": "C:\\project-vs\\TikiFake\\TikiFake\\TikiFake.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\project-vs\\TikiFake\\TikiFake\\obj\\",
+        "projectPath": "C:\\Ky 6\\OJT-BackEnd-Training\\TikiFake\\TikiFake.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Ky 6\\OJT-BackEnd-Training\\TikiFake\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
